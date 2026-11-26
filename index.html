@@ -4,28 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turrnut Republic</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./icon/coa/turrnut.ico">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icon/coa/turrnut.ico">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="../" class="logo">
-            <img src="./icon/coa/turrnut.png" alt="Logo Icon" class="logo-icon">
-            Turrnut Republic
-        </a>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="./">Home</a></li>
-            <li><a href="./news/">News</a></li>
-            <li><a href="./gov/">Government</a></li>
-            <li><a href="./culture/">Culture</a></li>
-            <li><a href="./joinus/">Join Us</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder">
+
+    </div>
 
     <!-- Background Video -->
     <div id="backgroundvideo">
@@ -41,19 +26,19 @@
 
     <!-- Service List -->
     <div id="service_list">
-        <a href="./news/" id="service">
+        <a href="/news/" id="service">
             <img src="img/blogs.png" alt="News">
             <p>News</p>
         </a>
-        <a href="./gov/" id="service">
+        <a href="/gov/" id="service">
             <img src="img/blogs.png" alt="Government">
             <p>Government</p>
         </a>
-        <a href="./culture/" id="service">
+        <a href="/culture/" id="service">
             <img src="img/blogs.png" alt="Culture">
             <p>Culture</p>
         </a>
-        <a href="./joinus/" id="service">
+        <a href="/joinus/" id="service">
             <img src="img/blogs.png" alt="Join Us">
             <p>Join Us</p>
         </a>
@@ -80,8 +65,14 @@
 
     <script src="js/script.js"></script>
     <script defer>
-        hope();
-        fetch('./templates/footer.html')
+        fetch('/templates/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            hope();
+        });
+        
+        fetch('/templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;

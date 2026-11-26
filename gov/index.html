@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turrnut Republic</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="../icon/coa/turrnut.ico">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icon/coa/turrnut.ico">
 
 </head>
 <body>
@@ -18,7 +18,7 @@
     <p>Turrnesian is a language invented by Turrnut.</p>
     <div id="service_list">
         <a target="_blank" href="https://docs.google.com/document/d/1wjsrdwxmHa9CJbMBunDcT_phTBVnIjWFZuU8Sgwk8vE/edit?usp=sharing" id="service">
-            <img src="../img/blogs.png" alt="Icon for the Turrnesian Dictionary">
+            <img src="/img/blogs.png" alt="Icon for the Turrnesian Dictionary">
             <p>The Dictionary</p>
         </a>
         <a href="./guide.html" id="service">
@@ -41,16 +41,16 @@
         
     </div>
 
-    <script src="../js/script.js"></script>
+    <script src="/js/script.js"></script>
     <script defer>
-        fetch('../templates/navbar.html')
+        fetch('/templates/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
                 hope();
             });
 
-        fetch('../templates/footer.html')
+        fetch('/templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
